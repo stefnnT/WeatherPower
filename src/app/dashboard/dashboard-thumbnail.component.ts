@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ToastrService } from '../common/toastr.service';
 
 @Component({
     selector: 'dashboard-thumbnail',
@@ -9,10 +10,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class DashboardThumbnailComponent {
-    @Input() sitesList: any;
+    @Input() site: any;
     @Output() siteStatus = new EventEmitter();
 
+    constructor(private toastr: ToastrService) {}
+
     showStatus() {
-        this.siteStatus.emit("ON");
+        this.toastr.success(this.site.status, this.site.name)
     }
 }

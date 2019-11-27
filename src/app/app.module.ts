@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardThumbnailComponent } from './dashboard/dashboard-thumbnail.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SitesService } from './dashboard/shared/sites.service';
+import { ToastrService } from './common/toastr.service';
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    SitesService,
+    ToastrService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

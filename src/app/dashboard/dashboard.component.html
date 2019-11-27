@@ -3,7 +3,7 @@
     <hr>
     <div class="row">
         <div *ngFor="let site of sites" class="col-sm-4">
-            <dashboard-thumbnail [sitesList]="site" (siteStatus)="showStatus($event)"></dashboard-thumbnail>
+            <dashboard-thumbnail [site]="site"></dashboard-thumbnail>
         </div>
     </div>
 </div>
