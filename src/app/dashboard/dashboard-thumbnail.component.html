@@ -1,0 +1,17 @@
+<div class="well hoverwell thumbnail">
+    <div style="margin-bottom: 10px;">
+        <h2 style="display: inline; line-height: 100%;">{{sitesList.name}}</h2>
+        <button class="btn btn-info btn-lg" (click)="showStatus()"
+            style="float: right; margin-top: -10px;">STATUS</button>
+    </div>
+    <div>
+        <span class="width-20">Location: </span><span>{{sitesList.location.address}}</span>
+        <span>&nbsp;</span>
+        <span>{{sitesList.location.city}}, {{sitesList.location.country}}</span>
+    </div>
+    <div>Longitude: {{sitesList.coordinates.longitude}}</div>
+    <div>Latitude: {{sitesList.coordinates.latitude}}</div>
+    <div>Vendor: {{sitesList.contractor.name}}</div>
+    <div>Maintenance Personnel: {{sitesList.maintenancePersonnel.firstName + ' ' + sitesList.maintenancePersonnel.lastName}}</div>
+    <div>Contact Phone: {{sitesList.maintenancePersonnel.phone}}</div>
+</div>

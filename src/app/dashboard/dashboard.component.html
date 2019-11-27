@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <h1>Site Names</h1>
+    <hr>
+    <div class="row">
+        <div *ngFor="let site of sites" class="col-sm-4">
+            <dashboard-thumbnail [sitesList]="site" (siteStatus)="showStatus($event)"></dashboard-thumbnail>
+        </div>
+    </div>
+</div>
