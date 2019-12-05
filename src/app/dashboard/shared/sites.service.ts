@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 
 export class SitesService {
     getSites() {
-        return SITES;
+      let subject = new Subject();
+      setTimeout(() => {
+        subject.next(SITES); 
+        subject.complete();
+      }, 100)
+      return subject;
+    }
+
+    getSite(id: number) {
+      return SITES.find(site => site.id === id);
     }
 }
 

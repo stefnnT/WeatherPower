@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SitesService } from './shared/sites.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'dashboard',
@@ -10,7 +11,7 @@ import { SitesService } from './shared/sites.service';
 export class DashboardComponent implements OnInit {
   sites: any[];
 
-  constructor(private sitesService: SitesService) {}
+  constructor(private sitesService: SitesService, private route: ActivatedRoute) {}
   
   showStatus(data) {
     //change this to popper or toastr
@@ -18,7 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sites = this.sitesService.getSites();
+    this.sites = this.route.snapshot.data['sites']
   }
 
 }

@@ -12,8 +12,9 @@
     margin-bottom: 0;
 }
 
+
 .navbar-inverse {
-    background-color: rgb(100, 156, 163);
+    background-color:  rgb(100, 156, 163);
     border-color: rgb(103, 158, 166);
 }
 
@@ -21,15 +22,17 @@
     color: #eee;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:focus, 
-.navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>li:hover {
-    color: #fff;
-    background-color: red;
+
+.navbar-inverse .navbar-nav>li>.active{
+    color: rgb(250, 173, 7);
+    background-color: transparent;
 }
 
-@media screen and (max-width: 764px) {
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color:  rgb(79, 127, 134);
+}
+
+@media screen and (max-width: 766px) {
     .navbar {
         padding: 0 15px;
     }

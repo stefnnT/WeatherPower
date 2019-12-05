@@ -1,2 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container-fluid {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+@media (max-width: 385px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 386px) and (max-width: 450px) {
+    .container-fluid {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
 

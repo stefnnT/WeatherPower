@@ -16,6 +16,6 @@ export class DashboardThumbnailComponent {
     constructor(private toastr: ToastrService) {}
 
     showStatus() {
-        this.toastr.success(this.site.status, this.site.name)
+        this.toastr.success(this.site.status, this.site.name);
     }
 }

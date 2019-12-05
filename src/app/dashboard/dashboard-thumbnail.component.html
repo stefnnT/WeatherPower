@@ -1,4 +1,4 @@
-<div class="well hoverwell thumbnail">
+<div [routerLink]="['/sites', site.id]" class="well hoverwell thumbnail">
     <div style="margin-bottom: 10px;">
         <h2 style="display: inline; line-height: 100%;">{{site.name}}</h2>
         <button class="btn btn-info btn-lg" (click)="showStatus()"
